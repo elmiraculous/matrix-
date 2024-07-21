@@ -9,14 +9,13 @@ class S21Matrix{
 
       AllocateMemory();
       DeallocateMemory();
-      CopyMatrix();
-      MoveMatrix();
+      CopyMatrix(const S21Matrix& other);
+      MoveMatrix(S21Matrix&& other);
 
     public:
 
         int getRows() { return rows_; }
         int getCols() { return cols_; }
-        double** getMatrix() { return matrix_; }
         void SetRows(int rows);
         void SetColumns(int cols);
 
@@ -37,6 +36,7 @@ class S21Matrix{
         S21Matrix CalcComplements();
         double Determinant();
         S21Matrix InverseMatrix();
+        S21Matrix MinorMatrix(int row, int col) const
 
         S21Matrix operator+=(const S21Matrix& other);
         S21Matrix operator-=(const S21Matrix& other);
