@@ -1,4 +1,4 @@
-#include "s21_matrix_oop.hpp"
+#include "s21_matrix_oop.h"
 
 #include <cmath>
 
@@ -61,23 +61,23 @@ void S21Matrix::CopyMatrix(const S21Matrix& other) {
     }
 }
 
-void S21Matrix::SetRows(int rows){
-    if(rows!=rows_ and rows>0){
-        matrix_ = new double*[rows_];
-        for (int i = 0; i < rows_; ++i) {
-            matrix_[i] = new double[cols_]();
-            if (i<rows_){
-                    std::copy(matrix_[i], matrix_[i] + cols_, new_matrix[i]);
-            }
-        })
-        DeallocateMemory();
-        rows_ = rows;
-        matrix_ = new_matrix;
+// void S21Matrix::SetRows(int rows){
+//     if(rows!=rows_ and rows>0){
+//         matrix_ = new double*[rows_];
+//         for (int i = 0; i < rows_; ++i) {
+//             matrix_[i] = new double[cols_]();
+//             if (i<rows_){
+//                     std::copy(matrix_[i], matrix_[i] + cols_, new_matrix[i]);
+//             }
+//         }
+//         DeallocateMemory();
+//         rows_ = rows;
+//         matrix_ = new_matrix;
 
-    }
-}
+//     }
+// }
 
-void S21Matrix::SetColumns(int cols) {
+void S21Matrix::SetCols(int cols) {
     if(cols!=cols_ and cols>0){
         for (int i = 0; i < rows_; ++i) {
             double* new_row = new double[cols]();
@@ -92,7 +92,7 @@ void S21Matrix::SetColumns(int cols) {
 bool S21Matrix::EqMatrix(const S21Matrix& other) {
     bool res = true;
     if (other.rows_ != rows_ || other.cols_ != cols_) {
-        result = false;
+        res = false;
     } else {
         for (int i = 0; i < rows_; i++) {
             for (int j = 0; j < cols_; j++) {
@@ -101,8 +101,9 @@ bool S21Matrix::EqMatrix(const S21Matrix& other) {
                 }
             }
         }
-        return res;
+        
     }
+    return res;
 }
 
 void S21Matrix::SumMatrix(const S21Matrix& other){
@@ -256,7 +257,7 @@ S21Matrix S21Matrix::operator*(const S21Matrix& other){
 }
 S21Matrix S21Matrix::operator*(const double num){
     S21Matrix new_matrix = *this;
-    new_matrix += num;
+    new_matrix *= num;
     return new_matrix;
 }
 
@@ -278,10 +279,9 @@ double& S21Matrix::operator()(int i, int j) {
     return matrix_[i][j];
 }
 
-double S21Matrix::operator()(int i, int j) const {
+double& S21Matrix::operator()(int i, int j) const {
     if (i < 0 || i >= rows_ || j < 0 || j >= cols_) {
         //вывести ошибку
     }
     return matrix_[i][j];
 }
-

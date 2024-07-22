@@ -7,17 +7,19 @@ class S21Matrix{
       int cols_;
       double **matrix_;
 
-      AllocateMemory();
-      DeallocateMemory();
-      CopyMatrix(const S21Matrix& other);
-      MoveMatrix(S21Matrix&& other);
+      void AllocateMemory();
+      void DeallocateMemory();
+      void CopyMatrix(const S21Matrix& other);
+      void MoveMatrix(S21Matrix&& other);
+      bool СheckCorrect();
+      bool СheckCorrect(S21Matrix other);
 
     public:
 
-        int getRows() { return rows_; }
-        int getCols() { return cols_; }
-        void SetRows(int rows);
-        void SetColumns(int cols);
+        int GetRows() { return rows_; }
+        int GetCols() { return cols_; }
+        // void SetRows(int rows);
+        void SetCols(int cols);
 
 
 
@@ -36,12 +38,12 @@ class S21Matrix{
         S21Matrix CalcComplements();
         double Determinant();
         S21Matrix InverseMatrix();
-        S21Matrix MinorMatrix(int row, int col) const
+        S21Matrix MinorMatrix(int row, int col) const;
 
-        S21Matrix operator+=(const S21Matrix& other);
-        S21Matrix operator-=(const S21Matrix& other);
-        S21Matrix operator*=(const S21Matrix& other);
-        S21Matrix operator*=(const double num);
+        S21Matrix& operator+=(const S21Matrix& other);
+        S21Matrix& operator-=(const S21Matrix& other);
+        S21Matrix& operator*=(const S21Matrix& other);
+        S21Matrix& operator*=(const double num);
 
         S21Matrix operator+(const S21Matrix& other);
         S21Matrix operator-(const S21Matrix& other);
@@ -57,7 +59,7 @@ class S21Matrix{
 
 
 
-}
+};
 
 
 #endif // S21_MATRIX_OOP_H
