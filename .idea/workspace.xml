@@ -9,7 +9,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15b839ab-0b42-4e30-a010-e87f8c94af3a" name="Changes" comment="" />
+    <list default="true" id="15b839ab-0b42-4e30-a010-e87f8c94af3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/s21_calc_complements_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_create_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_determinant_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_eq_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_get_set_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_inverse_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_mult_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_mult_number_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_operators_tests.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_sub_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_sum_matrix_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_tests.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_tests.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/s21_transpose_matrix_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s21_matrix_oop.cc" beforeDir="false" afterPath="$PROJECT_DIR$/s21_matrix_oop.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s21_matrix_oop.h" beforeDir="false" afterPath="$PROJECT_DIR$/s21_matrix_oop.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s21_matrix_tests.cc" beforeDir="false" afterPath="$PROJECT_DIR$/s21_matrix_tests.cc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,26 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl$/Debian/home/elmira_debian/matrix_plus",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Debian/home/elmira_debian/matrix_plus&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Debian\home\elmira_debian\matrix_plus\tests" />
+      <recent name="\\wsl$\Debian\home\elmira_debian\matrix_plus" />
       <recent name="\\wsl$\Ubuntu\home\elmira\matrix_plus" />
     </key>
   </component>
@@ -74,6 +95,7 @@
       <workItem from="1721571856810" duration="3316000" />
       <workItem from="1721577063736" duration="8365000" />
       <workItem from="1721588132407" duration="3160000" />
+      <workItem from="1721742119797" duration="7963000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,7 @@ private:
 public:
     int GetRows() const { return rows_; }
     int GetCols() const { return cols_; }
+    double** GetMatrix() const { return matrix_; }
     void SetRows(int rows);
     void SetCols(int cols);
 

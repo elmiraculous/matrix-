@@ -98,13 +98,13 @@ class matrixTest : public testing::Test {
   }
 };
 
-// TEST_F(matrixTest, set_row) {
-//   S21Matrix x(3, 3), y(2, 3);
-//   x = matrix_calc_c;
-//   y = matrix_minus_row;
-//   x.SetRows(2);
-//   EXPECT_EQ(x == y, true);
-// }
+ TEST_F(matrixTest, set_row) {
+   S21Matrix x(3, 3), y(2, 3);
+   x = matrix_calc_c;
+   y = matrix_minus_row;
+   x.SetRows(2);
+   EXPECT_EQ(x == y, true);
+ }
 
 TEST_F(matrixTest, set_col) {
   S21Matrix x(3, 2), y(3, 3);
@@ -131,13 +131,13 @@ TEST(MatrixPlusTest, moveConstructor) {
   EXPECT_EQ(m.GetCols(), 0);
 }
 
-// TEST(MatrixPlusTest, SetRows) {
-//   S21Matrix m(2, 3);
-//   m(1, 1) = 4.4;
-//   EXPECT_EQ(m(1, 1), 4.4);
-//   EXPECT_EQ(m.GetRows(), 2);
-//   EXPECT_EQ(m.GetCols(), 3);
-// }
+ TEST(MatrixPlusTest, SetRows) {
+   S21Matrix m(2, 3);
+   m(1, 1) = 4.4;
+   EXPECT_EQ(m(1, 1), 4.4);
+   EXPECT_EQ(m.GetRows(), 2);
+   EXPECT_EQ(m.GetCols(), 3);
+ }
 
 TEST(MatrixPlusTest, copy) {
   S21Matrix a(2, 2);
@@ -563,10 +563,10 @@ TEST_F(matrixTest, det_matrix) {
   ASSERT_THROW(z.Determinant(), std::logic_error);
 }
 
-// TEST_F(matrixTest, set_rows_) {
-//   S21Matrix z(5, 3);
-//   ASSERT_THROW(z.SetRows(-1), std::out_of_range);
-// }
+ TEST_F(matrixTest, set_rows_) {
+   S21Matrix z(5, 3);
+   ASSERT_THROW(z.SetRows(-1), std::out_of_range);
+ }
 
 TEST_F(matrixTest, set_cols_) {
   S21Matrix z(5, 3);
