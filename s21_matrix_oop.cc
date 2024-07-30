@@ -55,13 +55,13 @@ void S21Matrix::CopyMatrix(const S21Matrix& other) {
 
 void S21Matrix::CheckMatrixValidity() const {
     if (rows_ <= 0 || cols_ <= 0 || matrix_ == nullptr) {
-        throw std::runtime_error("Invalid matrix.");
+        throw std::logic_error("Invalid matrix.");
     }
 }
 
 void S21Matrix::CheckMatrixValidity(const S21Matrix& other) const {
     if (other.rows_ <= 0 || other.cols_ <= 0 || other.matrix_ == nullptr) {
-        throw std::runtime_error("Invalid matrix.");
+        throw std::logic_error("Invalid matrix.");
     }
 }
 
@@ -209,14 +209,11 @@ S21Matrix S21Matrix::CalcComplements() const {
 double S21Matrix::Determinant() const {
     CheckMatrixValidity();
     if (rows_ != cols_) {
-        throw std::invalid_argument("Matrix must be square.");
+        throw std::logic_error("Matrix must be square.");
     }
     if (rows_ == 1) {
         return matrix_[0][0];
     }
-//    } else if (rows_ == 2) {
-//        return matrix_[0][0] * matrix_[1][1] - matrix_[1][0] * matrix_[0][1];
-//    }
     double det = 0;
     int sign = 1;
     for (int i = 0; i < cols_; ++i) {
@@ -245,11 +242,11 @@ S21Matrix S21Matrix::MinorMatrix(int row, int col) const {
 S21Matrix S21Matrix::InverseMatrix() const {
     CheckMatrixValidity();
     if (rows_ != cols_) {
-        throw std::invalid_argument("Matrix must be square.");
+        throw std::logic_error("Matrix must be square.");
     }
     double det = Determinant();
     if (fabs(det) < 1e-7) {
-        throw std::runtime_error("Matrix is singular and cannot be inverted.");
+        throw std::logic_error("Matrix is singular and cannot be inverted.");
     }
     if (rows_ == 1) {
         S21Matrix result(1, 1);
